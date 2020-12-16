@@ -39,10 +39,12 @@ function onMounseMove(event) {
         //console.log("creating path in",x,y);
         ctx.beginPath(); //path: line
         ctx.moveTo(x, y); //좌표
+        canvas.style.cursor = "grab";
     }else{ //클릭하고 움직임
         //console.log("creating line in",x,y);
         ctx.lineTo(x, y); //이전좌표와 지금좌표를 (직)선을만듬.
         ctx.stroke(); //선을 그림.
+        canvas.style.cursor = "grabbing";
     }
 }
 
